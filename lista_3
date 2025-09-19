@@ -1,0 +1,27 @@
+"""
+3. Lista de Compras
+Permita que o usuário monte uma lista de compras usando uma lista. Use funções para:
+
+*Adicionar item.
+*Remover item.
+*Mostrar a lista ordenada.
+
+"""
+lista = []
+
+def adicionar(item):
+    lista.append(item) #append = adiciona um item no final da lista
+
+def remover(item):
+    lista.remove(item) #remove a primeira ocorrência da lista
+
+def listar():
+    for item in sorted(lista): #sorted = ordem alfabética
+        print(item)
+
+adicionar("Aveia")
+adicionar("Morango")
+adicionar("Detergente")
+remover("Morango")
+adicionar("Chocolate")
+listar()
