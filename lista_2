@@ -1,0 +1,26 @@
+"""
+2. Controle de Estoque
+*Crie um dicionário que representa um estoque de produtos. Cada chave é o nome do produto, e o valor é a quantidade.
+ Faça funções para:
+
+*Adicionar produto.
+*Atualizar quantidade.
+*Listar estoque.
+"""
+
+estoque = {}
+
+def adiciona(produto, quantidade):
+    estoque[produto] = quantidade
+
+def atualiza(produto, quantidade):
+    estoque[produto] = quantidade #como se fosse estoque[arroz] = 10
+
+def listar(): #se usa um loop para listar tudo
+    for produto, quantidade in estoque.items():
+        print(f'Produto: {produto}, Quantidade: {quantidade}')
+
+adiciona('Bananas', 7)
+adiciona('Barrinha Proteica', 50)
+atualiza('Barrinha Proteica', 45)
+listar()
