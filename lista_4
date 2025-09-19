@@ -1,0 +1,29 @@
+"""
+4. Análise de Notas
+Com uma lista de tuplas contendo (nome, nota), crie funções que:
+
+*Calcule a média da turma.
+*Liste alunas com nota acima da média.
+*Liste alunas com nota abaixo da média.
+"""
+
+notas =[('Giovanna', 10), ('Eduarda', 5), ('Fabiana', 8)]
+
+def media ():
+    return sum(n for _, n in notas)/ len(notas) #o len ve quantos elementos a tupla tem, 3
+
+def acima_media ():
+    for nome, nota in notas:
+        if nota > media():
+            print(f"{nome} está acima da média")
+
+def abaixo_media ():
+    for nome, nota in notas:
+        if nota < media():
+            print(f"{nome} está abaixo da média")
+
+print("Média da turma:", media())
+print("\nAlunas acima da média:")
+acima_media()
+print("\nAlunas abaixo da média:")
+abaixo_media()
