@@ -1,0 +1,44 @@
+"""
+6. Agenda Telefônica
+Crie um programa com um dicionário onde a chave é o nome da pessoa e o valor é o número. Use funções para:
+
+*Adicionar contato.
+*Buscar por nome.
+*Remover contato.
+
+"""
+
+print("======AGENDA TELEFÔNICA=======")
+
+dicionario = {}
+
+# Adiciona contato
+def adiciona(nome, numero):
+    dicionario[nome] = numero
+
+# Busca por nome
+def buscar(nome):
+    print(dicionario.get(nome, "Não encontrado"))  # .get() procura a chave no dicionário
+
+# Remove contato
+def remove(nome):
+    dicionario.pop(nome, None)  # Remove a chave, se existir
+
+# Lista todos os contatos
+def listar():
+    for nome, numero in dicionario.items():
+        print(nome, numero)
+
+# -------- Exemplo de uso --------
+adiciona("Giovanna", "99899-1782")
+adiciona("Maria", "99899-9282")
+
+print("\nBuscando Alice:")
+buscar("Alice")
+
+print("\nLista completa de contatos:")
+listar()
+
+print("\nRemovendo Maria...")
+remove("Maria")
+listar()
