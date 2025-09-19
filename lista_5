@@ -1,0 +1,24 @@
+"""
+5. Frequência de Palavras
+Dado um texto digitado pela usuária, crie uma função que conte quantas vezes
+cada palavra aparece. Use um dicionário.
+"""
+
+texto = input("Digite um texto para contar as palavras e sua frequência:")
+
+def contador(texto):
+    palavras = texto.split()  # Divide o texto em lista de palavras
+    total = len(palavras)  # Conta quantas palavras existem
+    freq = {}  # Dicionário vazio para armazenar contagem
+
+    for p in palavras:
+        freq[p] = freq.get(p, 0) + 1  # Soma 1 para cada ocorrência
+
+    print(f"\nTotal de palavras: {total}")
+    print("Frequência de cada palavra:")
+    
+    for palavra, contagem in freq.items():
+        print(f"{palavra}: {contagem}")
+
+
+contador(texto)
