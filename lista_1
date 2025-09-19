@@ -1,0 +1,21 @@
+clientes = []
+
+def cadastrar(nome, idade):
+    clientes.append((nome, idade))
+
+def listar():
+    for c in clientes:
+        print(c)
+
+def busca(nome):
+    for c in clientes:
+        if c[0] == nome:
+            print(f"Foi encontrado o nome: {nome}")
+        else:
+            print("Não foi encontrado")
+
+cadastrar('Giovanna', '20')
+cadastrar('Guilherme', '23')
+cadastrar('Jonathan', '24')
+listar()
+busca('Giovanna')
