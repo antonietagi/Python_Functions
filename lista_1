@@ -1,3 +1,14 @@
+"""
+1. Cadastro de Clientes
+Crie um programa com funções que permita:
+
+*Cadastrar clientes (nome e idade) em uma lista de tuplas.
+
+*Listar todos os clientes cadastrados.
+
+*Buscar clientes por nome.
+"""
+
 clientes = []
 
 def cadastrar(nome, idade):
